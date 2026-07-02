@@ -294,11 +294,19 @@
   font-size: 0.7rem;
 }
 
+.hour-strip-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .hour-strip {
   display: flex;
   flex: 1;
   gap: 1px;
   height: 32px;
+  user-select: none;
 }
 
 .hour-block {
@@ -306,6 +314,19 @@
   border-radius: 2px;
   position: relative;
   transition: opacity 0.2s;
+  cursor: crosshair;
+}
+
+.range-label {
+  font-size: 0.75rem;
+  color: #60a5fa;
+  font-weight: 500;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+
+.ref-range-label {
+  color: #94a3b8;
 }
 
 .hour-block.selected {
@@ -332,13 +353,17 @@
 
 .hour-axis {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   margin-top: 0.25rem;
 }
 
 .hour-axis .hour-strip {
   height: 16px;
+}
+
+.hour-axis .hour-strip-wrapper {
+  flex: 1;
 }
 
 .axis-label {

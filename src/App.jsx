@@ -81,6 +81,7 @@ function App() {
         selectedZones={selectedZones}
         currentHour={currentHour}
         onHourChange={handleHourChange}
+        onRangeChange={setTimeRange}
         referenceZone={referenceZone}
         timeRange={timeRange}
       >
